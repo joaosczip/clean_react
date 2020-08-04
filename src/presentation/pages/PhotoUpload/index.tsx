@@ -20,13 +20,13 @@ const PhotoUpload: React.FC<Props> = ({ sendImage }) => {
         description,
       });
     },
-    [file, description]
+    [sendImage, file, description]
   );
 
   return (
     <Container>
       <h3>Select a picture</h3>
-      <FileInput type="file" />
+      <FileInput type="file" onChange={(e) => setFile(e.target.files[0])} />
       <TextInput
         type="text"
         placeholder="Photo description"

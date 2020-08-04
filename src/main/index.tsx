@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { PhotoUploadFactory } from "./factories/pages/PhotoUpload";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello</h1>
+    <PhotoUploadFactory />
   </React.StrictMode>,
   document.getElementById("root")
 );
