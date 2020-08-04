@@ -39,6 +39,7 @@ export const PhotoPicker = styled.div`
     width: 240px;
     height: 240px;
     align-self: center;
+    object-fit: cover;
   }
 `;
 
