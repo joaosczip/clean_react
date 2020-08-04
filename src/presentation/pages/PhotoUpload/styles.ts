@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  * {
-    font-family: "Roboto", sans-serif;
-  }
-`;
+export const Container = styled.div``;
 
 export const FileInput = styled.input`
   display: none;
