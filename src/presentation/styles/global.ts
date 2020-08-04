@@ -8,6 +8,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+    height: 100%;
+    background-color: #ededed;
+  }
+
   button {
     cursor: pointer;
   }

@@ -1,7 +1,14 @@
 import React, { useState, useCallback } from "react";
-
 import { SendImage } from "../../../domain/usecases/send-image";
-import { Container, FileInput, TextInput, SubmitButton } from "./styles";
+import {
+  Container,
+  PhotoPickerContainer,
+  PhotoPicker,
+  Camera,
+  FileInput,
+  TextInput,
+  SubmitButton,
+} from "./styles";
 
 type Props = {
   sendImage: SendImage;
@@ -25,14 +32,30 @@ const PhotoUpload: React.FC<Props> = ({ sendImage }) => {
 
   return (
     <Container>
-      <h3>Select a picture</h3>
-      <FileInput type="file" onChange={(e) => setFile(e.target.files[0])} />
-      <TextInput
-        type="text"
-        placeholder="Photo description"
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <SubmitButton onClick={handleSendPicture}>Send</SubmitButton>
+      <PhotoPickerContainer>
+        <h3>Select a picture</h3>
+        <div>
+          <PhotoPicker>
+            <img src="" />
+            <label htmlFor="file-input">
+              <Camera size={40} fill="#fff" />
+            </label>
+          </PhotoPicker>
+          <FileInput
+            id="file-input"
+            type="file"
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+          <TextInput>
+            <input
+              type="text"
+              placeholder="Photo description"
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </TextInput>
+          <SubmitButton onClick={handleSendPicture}>Send</SubmitButton>
+        </div>
+      </PhotoPickerContainer>
     </Container>
   );
 };
