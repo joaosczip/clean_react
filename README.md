@@ -1,4 +1,7 @@
-Link to my article: https://medium.com/@joaogbsczip/implementando-clean-architecture-no-reactjs-af17fb70ca6
+Link to my articles:
+
+- Pt 1: https://medium.com/@joaogbsczip/implementando-clean-architecture-no-reactjs-af17fb70ca6
+- Pt 2: https://medium.com/@joaogbsczip/clean-architecture-reactjs-pt-2-fa1a166dcfea
 
 ## Resume
 
