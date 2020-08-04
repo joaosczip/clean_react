@@ -23,11 +23,23 @@ export const PhotoPickerContainer = styled.div`
 
 export const PhotoPicker = styled.div`
   border-radius: 50%;
-  border: 1px solid #000;
-  height: 160px;
-  width: 160px;
+  height: 240px;
+  width: 240px;
   align-self: center;
   margin: 16px auto;
+  background-color: #ededed;
+  box-shadow: 0px 1px 3px -1px #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    align-self: center;
+  }
 `;
 
 export const FileInput = styled.input`
@@ -36,6 +48,9 @@ export const FileInput = styled.input`
 
 export const Camera = styled(FiCamera)`
   cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  right: 0;
 `;
 
 export const TextInput = styled.div`
