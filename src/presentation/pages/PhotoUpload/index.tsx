@@ -19,18 +19,15 @@ const PhotoUpload: React.FC<Props> = ({ sendImage }) => {
   const [fileUrl, setFileUrl] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSelectPicture = useCallback(
-    (event) => {
-      const selectedFile = event.target.files[0];
-      const fileReader = new FileReader();
-      fileReader.onload = (e) => {
-        setFileUrl(e.target.result as string);
-      };
-      fileReader.readAsDataURL(selectedFile);
-      setFile(selectedFile);
-    },
-    [file]
-  );
+  const handleSelectPicture = useCallback((event) => {
+    const selectedFile = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => {
+      setFileUrl(e.target.result as string);
+    };
+    fileReader.readAsDataURL(selectedFile);
+    setFile(selectedFile);
+  }, []);
 
   const handleSendPicture = useCallback(
     async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -50,7 +47,7 @@ const PhotoUpload: React.FC<Props> = ({ sendImage }) => {
         <h3>Select a picture</h3>
         <div>
           <PhotoPicker>
-            {fileUrl && <img src={fileUrl} />}
+            {fileUrl && <img src={fileUrl} alt="Choosen Pic" />}
             <label htmlFor="file-input">
               <Camera size={60} fill="#fff" />
             </label>
